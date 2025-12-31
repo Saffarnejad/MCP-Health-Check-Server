@@ -1,6 +1,56 @@
-@McpHealthServer_HostAddress = http://localhost:5156
+@McpHealthServer_HostAddress = https://localhost:5001
+@McpHealthServer_SessionId = d42cf99e-cb20-4573-b60c-1b3fb29773fd
 
-GET {{McpHealthServer_HostAddress}}/weatherforecast/
+GET {{McpHealthServer_HostAddress}}/health
 Accept: application/json
 
 ###
+
+GET {{McpHealthServer_HostAddress}}/admin/sessions
+Accept: application/json
+
+###
+
+POST {{McpHealthServer_HostAddress}}/api/mcp/initialize
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "1.0",
+    "capabilities": {},
+    "clientInfo": {
+      "name": "client-name",
+      "version": "1.0"
+    }
+  },
+  "id": 1
+}
+
+###
+
+GET {{McpHealthServer_HostAddress}}/api/mcp/tools?session_id={{McpHealthServer_SessionId}}
+Content-Type: application/json
+
+###
+
+GET {{McpHealthServer_HostAddress}}/mcp/sse/{{McpHealthServer_SessionId}}
+Accept: text/event-stream
+
+###
+
+POST {{McpHealthServer_HostAddress}}/mcp/sse/{{McpHealthServer_SessionId}}/tool
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "tools/call",
+  "params": {
+    "name": "check_api_status",
+    "arguments": {
+      "url": "https://example.com/health"
+    }
+  },
+  "id": 2
+}
