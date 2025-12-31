@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpHealthServer", "McpHealt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpProtocol", "..\McpProtocol\McpProtocol.csproj", "{5CE6466A-4CE0-4871-8565-9BF5D3ABF7D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpHealthServer.Tests", "..\..\tests\McpHealthServer.Tests\McpHealthServer.Tests.csproj", "{7285214F-F4BB-4F81-81D1-1EFBEC1B3163}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{194016C4-0E71-4F0E-8944-74F329D72FD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +27,18 @@ Global
 		{5CE6466A-4CE0-4871-8565-9BF5D3ABF7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CE6466A-4CE0-4871-8565-9BF5D3ABF7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CE6466A-4CE0-4871-8565-9BF5D3ABF7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7285214F-F4BB-4F81-81D1-1EFBEC1B3163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7285214F-F4BB-4F81-81D1-1EFBEC1B3163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7285214F-F4BB-4F81-81D1-1EFBEC1B3163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7285214F-F4BB-4F81-81D1-1EFBEC1B3163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E86ED45-0FCD-48DD-BF11-9BFBA2A5F411} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5CE6466A-4CE0-4871-8565-9BF5D3ABF7D7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7285214F-F4BB-4F81-81D1-1EFBEC1B3163} = {194016C4-0E71-4F0E-8944-74F329D72FD0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {529D7BD5-6864-42B6-9C1F-5C1D864DC5B9}
